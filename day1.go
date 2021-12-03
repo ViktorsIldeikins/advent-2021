@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	file, _ := os.Open("day1.txt")
+	file, _ := os.Open("inputs/day1.txt")
 	defer file.Close()
 
 	scanner := bufio.NewScanner(file)
@@ -21,8 +21,8 @@ func main() {
 	}
 
 	count := 0
-	for i := 0; i + 3 < len(numbers); i++ {
-		if combine(numbers, i) < combine(numbers, i + 1) {
+	for i := 0; i+3 < len(numbers); i++ {
+		if combine(numbers, i) < combine(numbers, i+1) {
 			count++
 		}
 	}
@@ -30,5 +30,5 @@ func main() {
 }
 
 func combine(nums []int, firstIndex int) int {
-	return nums[firstIndex] + nums[firstIndex + 1] + nums[firstIndex + 2]
+	return nums[firstIndex] + nums[firstIndex+1] + nums[firstIndex+2]
 }
