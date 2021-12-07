@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"regexp"
-	"strconv"
 )
 
 const SPLIT_AGE = 7
@@ -49,15 +47,4 @@ func ageOneDay(subjects []int) []int {
 		subjects = append(subjects, 8)
 	}
 	return subjects
-}
-
-func parseInput(input string) []int {
-	r := regexp.MustCompile(",")
-	split := r.Split(input, -1)
-	var result []int
-	for _, num := range split {
-		parsedNum, _ := strconv.Atoi(num)
-		result = append(result, parsedNum)
-	}
-	return result
 }
