@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-func parseInput(input string) []int {
+func parseInputUtil(input string) []int {
 	r := regexp.MustCompile(",")
 	split := r.Split(input, -1)
 	var result []int
@@ -22,4 +22,8 @@ func abs(x int) int {
 	} else {
 		return x
 	}
+}
+
+func charToInt(char int32) int {
+	return int(char - '0')
 }

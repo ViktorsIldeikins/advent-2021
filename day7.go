@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	positions := parseInput(readFileByLine("day7.txt")[0])
+	positions := parseInputUtil(readFileByLine("day7.txt")[0])
 
 	smallestFuel := 1000000000
 	biggestPos := 0

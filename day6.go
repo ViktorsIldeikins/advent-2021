@@ -8,7 +8,7 @@ const SPLIT_AGE = 7
 
 func main() {
 	//subjects := []int {1}
-	//subjects := parseInput(readFileByLine("day6.txt")[0])
+	//subjects := parseInputUtil(readFileByLine("day6.txt")[0])
 
 	//for i:= 0; i< 256; i ++ {
 	//	subjects = ageOneDay(subjects)
