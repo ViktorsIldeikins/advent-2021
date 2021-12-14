@@ -27,3 +27,8 @@ func abs(x int) int {
 func charToInt(char int32) int {
 	return int(char - '0')
 }
+
+type StringPair struct {
+	first  string
+	second string
+}
