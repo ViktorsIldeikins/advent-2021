@@ -16,7 +16,7 @@ func main() {
 
 func doStep(board [][]int) ([][]int, int) {
 	board = increment(board)
-	var allLighted []Pair
+	var allLighted []IntPair
 	currentLighted := findLighted(board)
 	for len(allLighted) != len(currentLighted) {
 		unique := findUnique(currentLighted, allLighted)
@@ -49,19 +49,19 @@ func increment(board [][]int) [][]int {
 	return board
 }
 
-func findLighted(board [][]int) []Pair {
-	var result []Pair
+func findLighted(board [][]int) []IntPair {
+	var result []IntPair
 	for i, line := range board {
 		for k, val := range line {
 			if val > 9 {
-				result = append(result, Pair{k, i})
+				result = append(result, IntPair{k, i})
 			}
 		}
 	}
 	return result
 }
 
-func lightUp(board [][]int, location Pair) [][]int {
+func lightUp(board [][]int, location IntPair) [][]int {
 	if location.x > 0 {
 		board[location.y][location.x-1]++
 	}
@@ -101,13 +101,8 @@ func parseInputDay11(lines []string) [][]int {
 	return result
 }
 
-type Pair struct {
-	x int
-	y int
-}
-
-func findUnique(listToCheck []Pair, baseList []Pair) []Pair {
-	var result []Pair
+func findUnique(listToCheck []IntPair, baseList []IntPair) []IntPair {
+	var result []IntPair
 	for _, pair := range listToCheck {
 		isUnique := true
 		for _, base := range baseList {

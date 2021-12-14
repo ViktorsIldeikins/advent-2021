@@ -32,3 +32,8 @@ type StringPair struct {
 	first  string
 	second string
 }
+
+type IntPair struct {
+	x int
+	y int
+}
