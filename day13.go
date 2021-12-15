@@ -21,7 +21,7 @@ func main() {
 
 func fold(paper [][]bool, index int, foldX bool) [][]bool {
 	var result [][]bool
-	shift :=
+	//shift :=
 	if foldX {
 
 	}
